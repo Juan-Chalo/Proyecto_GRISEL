@@ -2,7 +2,7 @@
 
 if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
 
-    <ul class="sidebar-menu">
+    <ul class="sidebar-menu"><br><br><br>
         <li class="header">MENU</li>
 
 	<?php 
@@ -20,14 +20,14 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
 
   if ($_GET["module"]=="medicines" || $_GET["module"]=="form_medicines") { ?>
     <li class="active">
-      <a href="?module=medicines"><i class="fa fa-folder"></i> Datos de medicamentos </a>
+      <!-- <a href="?module=medicines"><i class="fa fa-folder"></i> Datos de medicamentos </a> -->
       </li>
   <?php
   }
 
   else { ?>
     <li>
-      <a href="?module=medicines"><i class="fa fa-folder"></i> Datos de medicamentos </a>
+      <!--<a href="?module=medicines"><i class="fa fa-folder"></i> Datos de medicamentos </a>-->
       </li>
   <?php
   }
@@ -35,14 +35,14 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
 
   if ($_GET["module"]=="medicines_transaction" || $_GET["module"]=="form_medicines_transaction") { ?>
     <li class="active">
-      <a href="?module=medicines_transaction"><i class="fa fa-clone"></i> Registro de medicamentos </a>
+      <!--<a href="?module=medicines_transaction"><i class="fa fa-clone"></i> Registro de medicamentos </a> -->
       </li>
   <?php
   }
 
   else { ?>
     <li>
-      <a href="?module=medicines_transaction"><i class="fa fa-clone"></i> Registro de medicamentos </a>
+      <!--<a href="?module=medicines_transaction"><i class="fa fa-clone"></i> Registro de medicamentos </a>-->
       </li>
   <?php
   }
@@ -50,7 +50,7 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
 	if ($_GET["module"]=="stock_inventory") { ?>
 		<li class="active treeview">
           	<a href="javascript:void(0);">
-            	<i class="fa fa-file-text"></i> <span>Reportes</span> <i class="fa fa-angle-left pull-right"></i>
+            	<!--<i class="fa fa-file-text"></i> <span>Reportes</span> <i class="fa fa-angle-left pull-right"></i>-->
           	</a>
       		<ul class="treeview-menu">
         		<li class="active"><a href="?module=stock_inventory"><i class="fa fa-circle-o"></i> Stock de Medicamentos </a></li>
@@ -63,7 +63,7 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
 	elseif ($_GET["module"]=="stock_report") { ?>
 		<li class="active treeview">
           	<a href="javascript:void(0);">
-            	<i class="fa fa-file-text"></i> <span>Reportes</span> <i class="fa fa-angle-left pull-right"></i>
+            	<!--<i class="fa fa-file-text"></i> <span>Reportes</span> <i class="fa fa-angle-left pull-right"></i>-->
           	</a>
       		<ul class="treeview-menu">
         		<li><a href="?module=stock_inventory"><i class="fa fa-circle-o"></i> Stock de Medicamentos </a></li>
@@ -75,9 +75,9 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
 
 	else { ?>
 		<li class="treeview">
-          	<a href="javascript:void(0);">
+          	<!--<a href="javascript:void(0);">
             	<i class="fa fa-file-text"></i> <span>Reportes</span> <i class="fa fa-angle-left pull-right"></i>
-          	</a>
+          	</a>-->
       		<ul class="treeview-menu">
         		<li><a href="?module=stock_inventory"><i class="fa fa-circle-o"></i> Stock de Medicamentos </a></li>
         		<li><a href="?module=stock_report"><i class="fa fa-circle-o"></i> Registro de medicamentos </a></li>

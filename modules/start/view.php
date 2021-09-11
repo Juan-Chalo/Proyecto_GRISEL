@@ -23,6 +23,7 @@
    
     <!-- Small boxes (Stat box) -->
     <div class="row">
+
       <div class="col-lg-3 col-xs-6">
         <!-- small box -->
         <div style="background-color:#00c0ef;color:#fff" class="small-box">
@@ -35,7 +36,8 @@
            
             $data = mysqli_fetch_assoc($query);
             ?>
-            <h3><?php echo $data['numero']; ?></h3>
+            <!--<h3> /* <?php echo $data['numero']; ?></h3> -->
+            <h3>0</h3> 
             <p>Datos de Medicamentos</p>
           </div>
           <div class="icon">
@@ -43,7 +45,7 @@
           </div>
           <?php  
           if ($_SESSION['permisos_acceso']!='gerente') { ?>
-            <a href="?module=form_medicines&form=add" class="small-box-footer" title="Agregar" data-toggle="tooltip"><i class="fa fa-plus"></i></a>
+            <!--<a href="?module=form_medicines&form=add" class="small-box-footer" title="Agregar" data-toggle="tooltip"><i class="fa fa-plus"></i></a>-->
           <?php
           } else { ?>
             <a class="small-box-footer"><i class="fa"></i></a>
@@ -52,6 +54,11 @@
           ?>
         </div>
       </div><!-- ./col -->
+
+
+
+
+
 
       <div class="col-lg-3 col-xs-6">
         <!-- small box -->
@@ -65,7 +72,8 @@
 
             $data = mysqli_fetch_assoc($query);
             ?>
-            <h3><?php echo $data['numero']; ?></h3>
+            <!--<h3><?php echo $data['numero']; ?></h3>-->
+            <h3>0</h3>
             <p>datos de entrada de Medicamentos</p>
           </div>
           <div class="icon">
@@ -73,7 +81,7 @@
           </div>
           <?php  
           if ($_SESSION['permisos_acceso']!='gerente') { ?>
-            <a href="?module=form_medicines_transaction&form=add" class="small-box-footer" title="Agregar" data-toggle="tooltip"><i class="fa fa-plus"></i></a>
+            <!--<a href="?module=form_medicines_transaction&form=add" class="small-box-footer" title="Agregar" data-toggle="tooltip"><i class="fa fa-plus"></i></a>-->
           <?php
           } else { ?>
             <a class="small-box-footer"><i class="fa"></i></a>
@@ -82,6 +90,12 @@
           ?>
         </div>
       </div><!-- ./col -->
+
+
+
+
+
+
 
       <div class="col-lg-3 col-xs-6">
         <!-- small box -->
@@ -94,15 +108,22 @@
 
             $data = mysqli_fetch_assoc($query);
             ?>
-            <h3><?php echo $data['numero']; ?></h3>
+            <!--<h3><?php echo $data['numero']; ?></h3>-->
+            <h3>0</h3>
             <p>Stock Medicamentos</p>
           </div>
           <div class="icon">
             <i class="fa fa-file-text-o"></i>
           </div>
-          <a href="?module=stock_inventory" class="small-box-footer" title="Imprimir" data-toggle="tooltip"><i class="fa fa-print"></i></a>
+          <!--<a href="?module=stock_inventory" class="small-box-footer" title="Imprimir" data-toggle="tooltip"><i class="fa fa-print"></i></a>-->
         </div>
       </div><!-- ./col -->
+
+
+
+
+
+
 
       <div class="col-lg-3 col-xs-6">
         <!-- small box -->
@@ -115,14 +136,19 @@
 
             $data = mysqli_fetch_assoc($query);
             ?>
-            <h3><?php echo $data['numero']; ?></h3>
+            <!--<h3><?php echo $data['numero']; ?></h3>-->
+            <h3>0</h3>
             <p>Registros de Medicamentos</p>
           </div>
           <div class="icon">
             <i class="fa fa-clone"></i>
           </div>
-          <a href="?module=stock_report" class="small-box-footer" title="Imprimir" data-toggle="tooltip"><i class="fa fa-print"></i></a>
+          <!--<a href="?module=stock_report" class="small-box-footer" title="Imprimir" data-toggle="tooltip"><i class="fa fa-print"></i></a>-->
         </div>
       </div><!-- ./col -->
+
+
+
+
     </div><!-- /.row -->
   </section><!-- /.content -->
