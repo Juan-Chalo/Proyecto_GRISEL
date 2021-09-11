@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Login | Inventario de Medicamentos</title>
+    <title>Login | Farmacia Grisel</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="Aplikasi Persediaan Obat pada Apotek">
@@ -27,7 +27,7 @@
   <body class="login-page bg-login">
     <div class="login-box">
       <div style="color:#3c8dbc" class="login-logo">
-        <img style="margin-top:-12px" src="assets/img/logo-blue.png" alt="Logo" height="50"> <b>MEDISYS</b>
+        <img style="margin-top:-12px" src="assets/img/logo-blue.png" alt="Logo" height="50"> <b>Farmacias GRISEL</b>
       </div><!-- /.login-logo -->
       <?php  
  
@@ -53,7 +53,7 @@
       ?>
 
       <div class="login-box-body">
-        <p class="login-box-msg"><i class="fa fa-user icon-title"></i> Por favor Inicie Sesión</p>
+        <p class="login-box-msg"><i class="fa fa-user icon-title"></i> Por favor Ingrese sus Credenciales</p>
         <br/>
         <form action="login-check.php" method="POST">
           <div class="form-group has-feedback">
