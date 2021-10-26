@@ -20,14 +20,14 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
 
   if ($_GET["module"]=="medicines" || $_GET["module"]=="form_medicines") { ?>
     <li class="active">
-      <!-- <a href="?module=medicines"><i class="fa fa-folder"></i> Datos de medicamentos </a> -->
+       <a href="?module=medicines"><i class="fa fa-folder"></i> Control de medicamentos </a> 
       </li>
   <?php
   }
 
   else { ?>
     <li>
-      <!--<a href="?module=medicines"><i class="fa fa-folder"></i> Datos de medicamentos </a>-->
+      <a href="?module=medicines"><i class="fa fa-folder"></i> Control de medicamentos </a>
       </li>
   <?php
   }

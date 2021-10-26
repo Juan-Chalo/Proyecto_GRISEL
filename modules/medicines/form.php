@@ -60,7 +60,7 @@ if ($_GET['form']=='add') { ?>
                 <label class="col-sm-2 control-label">Precio de Compra</label>
                 <div class="col-sm-5">
                   <div class="input-group">
-                    <span class="input-group-addon">$.</span>
+                    <span class="input-group-addon">Q.</span>
                     <input type="text" class="form-control" id="precio_compra" name="pcompra" autocomplete="off" onKeyPress="return goodchars(event,'0123456789',this)" required>
                   </div>
                 </div>
@@ -70,7 +70,7 @@ if ($_GET['form']=='add') { ?>
                 <label class="col-sm-2 control-label">Precio de Venta</label>
                 <div class="col-sm-5">
                   <div class="input-group">
-                    <span class="input-group-addon">$.</span>
+                    <span class="input-group-addon">Q.</span>
                     <input type="text" class="form-control" id="precio_venta" name="pventa" autocomplete="off" onKeyPress="return goodchars(event,'0123456789',this)" required>
                   </div>
                 </div>
