@@ -27,7 +27,7 @@
   <body class="login-page bg-login">
     <div class="login-box">
       <div style="color:#3c8dbc" class="login-logo">
-        <img style="margin-top:-12px" src="assets/img/logo-blue.png" alt="Logo" height="50"> <b>Farmacias GRISEL</b>
+        <img style="margin-top:-12px" src="images/logo.jpeg" alt="Logo" height="50"> <b>Hospital Regional de Cuilapa S.R</b>
       </div><!-- /.login-logo -->
       <?php  
  

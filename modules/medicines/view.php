@@ -59,13 +59,14 @@
                 <th class="center">Precio de venta</th>
                 <th class="center">Stock</th>
                 <th class="center">Unidad</th>
+                <th class="center">Fecha Vencimiento</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
             <?php  
             $no = 1;
-            $query = mysqli_query($mysqli, "SELECT codigo,nombre,precio_compra,precio_venta,unidad,stock FROM medicamentos ORDER BY codigo DESC")
+            $query = mysqli_query($mysqli, "SELECT codigo,nombre,precio_compra,precio_venta,unidad,stock,expire_date FROM medicamentos ORDER BY codigo DESC")
                                             or die('error: '.mysqli_error($mysqli));
 
             while ($data = mysqli_fetch_assoc($query)) { 
@@ -80,6 +81,7 @@
                       <td width='100' align='right'>Q $precio_venta</td>
                       <td width='80' align='right'>$data[stock]</td>
                       <td width='80' class='center'>$data[unidad]</td>
+                      <td width='80' class='center'>$data[expire_date]</td>
                       <td class='center' width='80'>
                         <div>
                           <a data-toggle='tooltip' data-placement='top' title='modificar' style='margin-right:5px' class='btn btn-primary btn-sm' href='?module=form_medicines&form=edit&id=$data[codigo]'>

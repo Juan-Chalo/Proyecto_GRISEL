@@ -20,14 +20,14 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
 
   if ($_GET["module"]=="medicines" || $_GET["module"]=="form_medicines") { ?>
     <li class="active">
-       <a href="?module=medicines"><i class="fa fa-folder"></i> Control de medicamentos </a> 
+       <a href="?module=medicines"><i class="fa fa-folder"></i> Gestion de medicamentos </a> 
       </li>
   <?php
   }
 
   else { ?>
     <li>
-      <a href="?module=medicines"><i class="fa fa-folder"></i> Control de medicamentos </a>
+      <a href="?module=medicines"><i class="fa fa-folder"></i> Gestion de medicamentos </a>
       </li>
   <?php
   }
@@ -35,14 +35,14 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
 
   if ($_GET["module"]=="medicines_transaction" || $_GET["module"]=="form_medicines_transaction") { ?>
     <li class="active">
-      <!--<a href="?module=medicines_transaction"><i class="fa fa-clone"></i> Registro de medicamentos </a> -->
+      <a href="?module=medicines_transaction"><i class="fa fa-clone"></i> Registro de medicamentos </a> 
       </li>
   <?php
   }
 
   else { ?>
     <li>
-      <!--<a href="?module=medicines_transaction"><i class="fa fa-clone"></i> Registro de medicamentos </a>-->
+      <a href="?module=medicines_transaction"><i class="fa fa-clone"></i> Registro de medicamentos </a>
       </li>
   <?php
   }
@@ -104,14 +104,14 @@ if ($_SESSION['permisos_acceso']=='Super Admin') { ?>
 
 	if ($_GET["module"]=="password") { ?>
 		<li class="active">
-			<a href="?module=password"><i class="fa fa-lock"></i> Cambiar contraseña</a>
+			<a href="?module=password"><i class="fa fa-lock"></i> Cambiar Mi Contraseña</a>
 		</li>
 	<?php
 	}
 
 	else { ?>
 		<li>
-			<a href="?module=password"><i class="fa fa-lock"></i> Cambiar contraseña</a>
+			<a href="?module=password"><i class="fa fa-lock"></i> Cambiar Mi Contraseña</a>
 		</li>
 	<?php
 	}
