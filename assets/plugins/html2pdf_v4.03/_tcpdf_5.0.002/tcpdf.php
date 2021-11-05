@@ -3015,7 +3015,7 @@ if (!class_exists('TCPDF', false)) {
 				} else {
 					$this->SetXY($this->original_lMargin, $footer_y);
 				}
-				$this->SetFont($this->footer_font[0], $this->footer_font[1], $this->footer_font[2]);
+				//$this->SetFont($this->footer_font[0], $this->footer_font[1], $this->footer_font[2]);
 				$this->Footer();
 				//restore position
 				if ($this->rtl) {
@@ -5227,7 +5227,7 @@ if (!class_exists('TCPDF', false)) {
 		 */
 		public function unichr($c) {
 			if (!$this->isunicode) {
-				return chr($c);
+				//return chr($c);
 			} elseif ($c <= 0x7F) {
 				// one byte
 				return chr($c);

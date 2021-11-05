@@ -106,6 +106,12 @@
 
 
             while ($data = mysqli_fetch_assoc($query)) { 
+
+              if ($data['permisos_acceso'] == 1) {
+                $permiso = "Gerente/Administrador";
+              }elseif($data['permisos_acceso'] == 2) {
+                $permiso = "Recepcion";
+              }
   
               echo "<tr>
                       <td width='50' class='center'>$no</td>";
@@ -120,7 +126,7 @@
 
               echo "  <td>$data[username]</td>
                       <td>$data[name_user]</td>
-                      <td>$data[permisos_acceso]</td>
+                      <td>$permiso</td>
                       <td class='center'>$data[status]</td>
 
                       <td class='center' width='100'>

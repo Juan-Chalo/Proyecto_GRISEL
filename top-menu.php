@@ -44,7 +44,11 @@ $data = mysqli_fetch_assoc($query);
 
       <p>
         <?php echo $data['name_user']; ?>
-        <small><?php echo $data['permisos_acceso']; ?></small>
+        <small><?php if ($data['permisos_acceso'] == 1) {
+          echo "Gerente/Admin";
+        }elseif($data['permisos_acceso'] == 2) {
+          echo "Recepcion";
+        }  ?></small>
       </p>
     </li>
     

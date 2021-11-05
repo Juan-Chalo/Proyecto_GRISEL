@@ -13,7 +13,7 @@ $hari_ini = date("d-m-Y");
 
 $no = 1;
 
-$query = mysqli_query($mysqli, "SELECT codigo,nombre,precio_compra,precio_venta,unidad,stock FROM medicamentos ORDER BY nombre ASC")
+$query = mysqli_query($mysqli, "SELECT codigo,nombre,precio_compra,precio_venta,unidad,stock,expire_date FROM medicamentos ORDER BY nombre ASC")
                                 or die('Error '.mysqli_error($mysqli));
 $count  = mysqli_num_rows($query);
 ?>
@@ -34,13 +34,14 @@ $count  = mysqli_num_rows($query);
             <table width="100%" border="0.3" cellpadding="0" cellspacing="0">
                 <thead style="background:#e8ecee">
                     <tr class="tr-title">
-                        <th height="20" align="center" valign="middle"><small>NO.</small></th>
+                        <th height="20" align="center" valign="middle"><small>No.</small></th>
                         <th height="20" align="center" valign="middle"><small>CODIGO</small></th>
                         <th height="20" align="center" valign="middle"><small>MEDICAMENTO</small></th>
                         <th height="20" align="center" valign="middle"><small>PRECIO DE COMPRA</small></th>
                         <th height="20" align="center" valign="middle"><small>PRECIO DE VENTA</small></th>
                         <th height="20" align="center" valign="middle"><small>STOCK</small></th>
                         <th height="20" align="center" valign="middle"><small>UNIDAD</small></th>
+                        <th height="20" align="center" valign="middle"><small>FECHA VENCIMIENTO</small></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,13 +52,14 @@ $count  = mysqli_num_rows($query);
             $precio_venta = format_rupiah($data['precio_venta']);
           
             echo "  <tr>
-                        <td width='40' height='13' align='center' valign='middle'>$no</td>
-                        <td width='80' height='13' align='center' valign='middle'>$data[codigo]</td>
-                        <td style='padding-left:5px;' width='180' height='13' valign='middle'>$data[nombre]</td>
-                        <td style='padding-right:10px;' width='80' height='13' align='right' valign='middle'>$. $precio_compra</td>
-                        <td style='padding-right:10px;' width='80' height='13' align='right' valign='middle'>$. $precio_venta</td>
-                        <td style='padding-right:10px;' width='80' height='13' align='right' valign='middle'>$data[stock]</td>
-                        <td width='80' height='13' align='center' valign='middle'>$data[unidad]</td>
+                        <td width='30' class='center'>$no</td>
+                      <td width='80' class='center'>$data[codigo]</td>
+                      <td width='180'>$data[nombre]</td>
+                      <td width='100' align='right'>Q $precio_compra</td>
+                      <td width='100' align='right'>Q $precio_venta</td>
+                      <td width='80' align='right'>$data[stock]</td>
+                      <td width='80' class='center'>$data[unidad]</td>
+                      <td width='80' class='center'>$data[expire_date]</td>
                     </tr>";
             $no++;
         }

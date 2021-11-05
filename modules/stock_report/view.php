@@ -1,12 +1,12 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    <i class="fa fa-file-text-o icon-title"></i>Informe de datos de registro de medicamentos
+    <i class="fa fa-file-text-o icon-title"></i>Informe de datos de Salidas y Entradas de medicamentos
   </h1>
   <ol class="breadcrumb">
     <li><a href="?module=start"><i class="fa fa-home"></i> Inicio</a></li>
     <li class="active">informe</li>
-    <li class="active"> registro de medicamentos</li>
+    <li class="active"> Reporte Movimientos de medicamentos</li>
   </ol>
 </section>
 
@@ -22,12 +22,12 @@
           <div class="box-body">
 
             <div class="form-group">
-              <label class="col-sm-1">Fecha</label>
+              <label class="col-sm-1">DESDE: </label>
               <div class="col-sm-2">
                 <input type="text" class="form-control date-picker" data-date-format="dd-mm-yyyy" name="tgl_awal" autocomplete="off" required>
               </div>
 
-              <label class="col-sm-1">Hasta</label>
+              <label class="col-sm-1">HASTA: </label>
               <div class="col-sm-2">
                 <input style="margin-left:-35px" type="text" class="form-control date-picker" data-date-format="dd-mm-yyyy" name="tgl_akhir" autocomplete="off" required>
               </div>

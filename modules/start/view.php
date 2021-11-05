@@ -123,7 +123,7 @@
     <div class="col-md-12">
       <section class="content-header">
   <h1>
-    <i class="fa fa-folder-o icon-title"></i> Listado Productos prontos a Expirar
+    <i class="fa fa-folder-o icon-title"></i> Listado Productos prontos a Expirar en 10 dias.
 
   </h1>
 
@@ -171,40 +171,23 @@
                 <th class="center">Codigo del Producto</th>
                 <th class="center">Nombre del producto</th>
                 <th class="center">Fecha Expiracion</th>
+
               </tr>
             </thead>
             <tbody>
             <?php  
             $no = 1;
-            //$query = mysqli_query($mysqli, "SELECT codigo,nombre,precio_compra,precio_venta,unidad,stock FROM medicamentos ORDER BY codigo DESC")
-                                            //or die('error: '.mysqli_error($mysqli));
+            $query = mysqli_query($mysqli, "SELECT codigo, nombre, expire_date FROM `medicamentos` WHERE expire_date BETWEEN CURRENT_DATE() and CURRENT_DATE + INTERVAL 11 DAY")
+                                            or die('error: '.mysqli_error($mysqli));
 
             while ($data = mysqli_fetch_assoc($query)) { 
-              $precio_compra = format_rupiah($data['precio_compra']);
-              $precio_venta = format_rupiah($data['precio_venta']);
            
               echo "<tr>
                       <td width='30' class='center'>$no</td>
                       <td width='80' class='center'>$data[codigo]</td>
-                      <td width='180'>$data[nombre]</td>
-                      <td width='100' align='right'>Q $precio_compra</td>
-                      <td width='100' align='right'>Q $precio_venta</td>
-                      <td width='80' align='right'>$data[stock]</td>
-                      <td width='80' class='center'>$data[unidad]</td>
-                      <td class='center' width='80'>
-                        <div>
-                          <a data-toggle='tooltip' data-placement='top' title='modificar' style='margin-right:5px' class='btn btn-primary btn-sm' href='?module=form_medicines&form=edit&id=$data[codigo]'>
-                              <i style='color:#fff' class='glyphicon glyphicon-edit'></i>
-                          </a>";
-            ?>
-                          <a data-toggle="tooltip" data-placement="top" title="Eliminar" class="btn btn-danger btn-sm" href="modules/medicines/proses.php?act=delete&id=<?php echo $data['codigo'];?>" onclick="return confirm('estas seguro de eliminar<?php echo $data['nombre']; ?> ?');">
-                              <i style="color:#fff" class="glyphicon glyphicon-trash"></i>
-                          </a>
-            <?php
-              echo "    </div>
-                      </td>
+                      <td width='180' class='center'>$data[nombre]</td>
+                      <td width='80' align='right'>$data[expire_date]</td>
                     </tr>";
-              $no++;
             }
             ?>
             </tbody>

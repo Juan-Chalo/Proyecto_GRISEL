@@ -86,6 +86,7 @@ if ($_GET['form']=='add') { ?>
                     <option value="caja">Caja</option>
                     <option value="raya">Raya</option>
                     <option value="tubo">Tubo</option>
+                    <option value="tubo">Unidad</option>
                   </select>
                 </div>
               </div>
